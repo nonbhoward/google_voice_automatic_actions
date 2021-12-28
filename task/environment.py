@@ -16,6 +16,8 @@ def get_voice_login_details():
             if project_name in de_line:
                 details = de_line.split(';')[1].split(' ')
                 for detail in details:
+                    # read each space delimited key value pair after
+                    #   the delimiter
                     k = detail.split('=')[0].strip('\n')
                     v = detail.split('=')[1].strip('\n')
                     login_details.update({k: v})
